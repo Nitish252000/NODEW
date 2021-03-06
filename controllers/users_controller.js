@@ -83,3 +83,12 @@ module.exports.createSession = function(req, res){
         }
     });
 }
+
+//setting up Log Out
+
+module.exports.destroySession=function(req,res){
+    // resetting cookie to blank
+     res.cookie('user_id','');
+     return res.redirect('back');
+   
+}
